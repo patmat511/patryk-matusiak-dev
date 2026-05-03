@@ -1,0 +1,42 @@
+---
+const pathname = Astro.url.pathname;
+---
+
+<nav class="flex justify-end gap-7 py-8 mb-20">
+  <a 
+    href="/projects" 
+    class:list={[
+      "text-sm transition-colors",
+      pathname.startsWith('/projects') ? "text-stone-50" : "text-stone-400 hover:text-stone-50"
+    ]}
+  >
+    projekty
+  </a>
+  <a 
+    href="/blog"
+    class:list={[
+      "text-sm transition-colors",
+      pathname.startsWith('/blog') ? "text-stone-50" : "text-stone-400 hover:text-stone-50"
+    ]}
+  >
+    blog
+  </a>
+  <a 
+    href="/about"
+    class:list={[
+      "text-sm transition-colors",
+      pathname === '/about' ? "text-stone-50" : "text-stone-400 hover:text-stone-50"
+    ]}
+  >
+    o mnie
+  </a>
+  <a 
+    href="/experience"
+    class:list={[
+      "text-sm transition-colors",
+      pathname === '/experience' ? "text-stone-50" : "text-stone-400 hover:text-stone-50"
+    ]}
+  >
+    doświadczenie
+  </a>
+</nav>

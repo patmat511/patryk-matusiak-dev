@@ -1,16 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
   <div class="max-w-2xl mx-auto px-6 py-8">
     
     <!-- NAV -->
-    <nav class="flex justify-end gap-7 py-8 mb-20">
-      <a href="/projects" class="text-sm text-stone-400 hover:text-stone-50 transition-colors">projekty</a>
-      <a href="/blog" class="text-sm text-stone-400 hover:text-stone-50 transition-colors">blog</a>
-      <a href="/about" class="text-sm text-stone-400 hover:text-stone-50 transition-colors">o mnie</a>
-    </nav>
+    <Nav />
     
     <!-- HERO -->
     <header class="mb-24">
@@ -43,7 +41,7 @@ import Layout from '../layouts/Layout.astro';
           <span class="font-mono text-xs text-stone-400">2026</span>
         </div>
         <p class="text-sm text-stone-400 mb-4 leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
         <div class="flex flex-wrap gap-1.5">
           <span class="font-mono text-xs text-stone-400 bg-stone-900 px-2 py-1 rounded">PyTorch</span>
@@ -58,7 +56,7 @@ import Layout from '../layouts/Layout.astro';
           <span class="font-mono text-xs text-stone-400">2025</span>
         </div>
         <p class="text-sm text-stone-400 mb-4 leading-relaxed">
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Ut enim ad minim veniam, quis nostrud exercitation.
         </p>
         <div class="flex flex-wrap gap-1.5">
           <span class="font-mono text-xs text-stone-400 bg-stone-900 px-2 py-1 rounded">Python</span>
@@ -72,12 +70,16 @@ import Layout from '../layouts/Layout.astro';
           <span class="font-mono text-xs text-stone-400">2025</span>
         </div>
         <p class="text-sm text-stone-400 mb-4 leading-relaxed">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Duis aute irure dolor in reprehenderit in voluptate.
         </p>
         <div class="flex flex-wrap gap-1.5">
           <span class="font-mono text-xs text-stone-400 bg-stone-900 px-2 py-1 rounded">React</span>
           <span class="font-mono text-xs text-stone-400 bg-stone-900 px-2 py-1 rounded">TypeScript</span>
         </div>
+      </a>
+      
+      <a href="/projects" class="inline-block mt-6 text-sm text-stone-400 hover:text-stone-50 transition-colors">
+        wszystkie projekty →
       </a>
     </section>
     
@@ -101,6 +103,10 @@ import Layout from '../layouts/Layout.astro';
         <span class="text-sm font-medium">Ut labore et dolore magna aliqua</span>
         <span class="font-mono text-xs text-stone-400 shrink-0">2026-02-19</span>
       </a>
+      
+      <a href="/blog" class="inline-block mt-6 text-sm text-stone-400 hover:text-stone-50 transition-colors">
+        wszystkie wpisy →
+      </a>
     </section>
     
     <!-- NOW -->
@@ -112,15 +118,11 @@ import Layout from '../layouts/Layout.astro';
         <span class="text-stone-50 font-semibold">Maj 2026.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
       <p class="text-stone-400">
-        Ut enim ad minim veniam. Otwarty na rozmowy o pozycjach Junior ML Engineer.
+        Otwarty na rozmowy o pozycjach Junior ML Engineer.
       </p>
     </section>
     
   </div>
   
-  <!-- FOOTER -->
-  <footer class="max-w-2xl mx-auto px-6 py-12 border-t border-stone-800 flex justify-between font-mono text-xs text-stone-400">
-    <span>© 2026 Patryk Matusiak</span>
-    <span>built with astro</span>
-  </footer>
+  <Footer />
 </Layout>
